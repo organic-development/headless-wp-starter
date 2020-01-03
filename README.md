@@ -19,13 +19,17 @@ yarn install
 
 ## Development
 
+If you are using [iTerm](https://iterm2.com/), you can install [itermocil](https://github.com/TomAnthony/itermocil) and run the `itermocil` command. This will open a split iTerm window, and start the services.
+
+Without iTerm, do the following:
+
 Start the Wordpress containers:
 
 ```bash
-yarn start:backend
+yarn start:wordpress
 ```
 
-Note: The first time I built the containers, `wp-headless` failed to build. Had to use this command to start:
+*Note: The first time I built the containers, `wp-headless` failed to build. Had to use this command to start:*
 
 ```bash
 docker-compose up --build --force-recreate wp-headless
