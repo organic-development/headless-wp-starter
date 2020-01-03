@@ -10,6 +10,15 @@ The following will just get the Gatsby frontend & Wordpress backend running:
 
 Before you begin, you need [Docker](https://www.docker.com) installed. On Linux, you might need to install [docker-compose](https://docs.docker.com/compose/install/#install-compose) separately.
 
+Install the packges:
+
+```bash
+cd frontend-gatsby
+yarn install
+```
+
+## Development
+
 Start the Wordpress containers:
 
 ```bash
@@ -20,4 +29,10 @@ Note: The first time I built the containers, `wp-headless` failed to build. Had 
 
 ```bash
 docker-compose up --build --force-recreate wp-headless
+```
+
+Start the Gatsby server:
+
+```bash
+yarn start:gatsby
 ```

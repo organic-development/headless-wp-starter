@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "postinstall": "docker-compose run --rm wp-headless install_wordpress",
-    "start": "docker-compose up",
-    "start:backend": "docker-compose up -d wp-headless db-headless"
+    "start": "docker-compose up -d wp-headless db-headless",
+    "start:gatsby": "cd frontend-gatsby && gatsby develop"
   }
 }
