@@ -40,3 +40,11 @@ Start the Gatsby server:
 ```bash
 yarn start:gatsby
 ```
+
+## Known Issues / Outstanding Tasks
+
+- `isFrontPage` attribute not found in `./src/templates/page/data.js`
+- Remove test posts
+- Remove unused plugins
+- Frontend deployment to App Engine
+- Backend deployment to Compute Engine
