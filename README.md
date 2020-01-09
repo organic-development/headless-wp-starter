@@ -52,9 +52,9 @@ The `docker/overrides` folder can be used to update any files in the Wordpress i
 
 ## Known Issues / Outstanding Tasks
 
-- `isFrontPage` attribute not found in `./src/templates/page/data.js` (Requires wp-graphql >= v0.4.1, which creates [this issue](https://github.com/postlight/headless-wp-starter/issues/243))
-- Set page as frontpage, rather than posts
-- Remove test posts
-- Remove unused plugins
-- Frontend deployment to App Engine
-- Backend deployment to Compute Engine
+- [x] `isFrontPage` attribute not found in `./src/templates/page/data.js` (Requires wp-graphql >= v0.4.1, which creates [this issue](https://github.com/postlight/headless-wp-starter/issues/243))
+- [ ] Set page as frontpage, rather than posts
+- [ ] Remove test posts
+- [ ] Remove unused plugins
+- [ ] Frontend deployment to App Engine
+- [ ] Backend deployment to Compute Engine
