@@ -48,7 +48,7 @@ The frontend will be running on http://localhost:8000
 
 ## Known Issues / Outstanding Tasks
 
-- `isFrontPage` attribute not found in `./src/templates/page/data.js`
+- `isFrontPage` attribute not found in `./src/templates/page/data.js` (Requires wp-graphql >= v0.4.1, which creates [this issue](https://github.com/postlight/headless-wp-starter/issues/243))
 - Remove test posts
 - Remove unused plugins
 - Frontend deployment to App Engine
