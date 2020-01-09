@@ -29,6 +29,9 @@ Start the Wordpress containers:
 yarn start:wordpress
 ```
 
+The Wordpress install will be running on http://localhost:8080.
+[Wordpress admin](http://localhost:8080) credentials are: `postlight:postlight`
+
 *Note: The first time I built the containers, `wp-headless` failed to build. Had to use this command to start:*
 
 ```bash
@@ -40,6 +43,8 @@ Start the Gatsby server:
 ```bash
 yarn start:gatsby
 ```
+
+The frontend will be running on http://localhost:8000
 
 ## Known Issues / Outstanding Tasks
 
