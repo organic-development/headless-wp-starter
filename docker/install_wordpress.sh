@@ -45,29 +45,17 @@ wp theme delete twentysixteen twentyseventeen twentynineteen twentytwenty
 
 wp plugin delete akismet hello
 wp plugin install --activate --force \
-    acf-to-wp-api \
-    advanced-custom-fields \
-    custom-post-type-ui \
     wordpress-importer \
     wp-rest-api-v2-menus \
     jwt-authentication-for-wp-rest-api \
     https://github.com/wp-graphql/wp-graphql/archive/v0.3.6.zip \
-    https://github.com/wp-graphql/wp-graphql-jwt-authentication/archive/V0.3.2.zip \
-    /var/www/plugins/*.zip
+    https://github.com/wp-graphql/wp-graphql-jwt-authentication/archive/V0.3.2.zip
 
-wp term update category 1 --name="Sample Category"
-wp post delete 1 2
+# Update WP to show page as home page
+wp option update show_on_front page
 
-wp import /var/www/postlightheadlesswpstarter.wordpress.xml --authors=skip --skip=attachment
-
-wp media import /var/www/images/Graphql2.png --featured_image \
-  --post_id=$(wp post list --field=ID --name=what-do-you-need-to-know-about-graphql)
-wp media import /var/www/images/19-word-press-without-shame-0.png --featured_image \
-  --post_id=$(wp post list --field=ID --name=wordpress-without-shame)
-wp media import /var/www/images/cropped-hal-gatewood-tZc3vjPCk-Q-unsplash.jpg --featured_image \
-  --post_id=$(wp post list --field=ID --name=why-bother-with-a-headless-cms)
-wp media import /var/www/images/careers-photo-opt.jpg --featured_image \
-  --post_id=$(wp post list --field=ID --post_type=page --name=postlight-careers)
+# Update WP to use "Sample Page" as home page
+wp option update page_on_front 2
 
 # Copy override files
 cp -r /var/www/overrides/* /var/www/html/
