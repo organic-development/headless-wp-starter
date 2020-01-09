@@ -28,6 +28,7 @@ services:
             - ./docker/postlightheadlesswpstarter.wordpress.xml:/var/www/postlightheadlesswpstarter.wordpress.xml
             - ./docker/images:/var/www/images
             - ./docker/plugins:/var/www/plugins
+            - ./docker/overrides:/var/www/overrides
     frontend:
         command: bash -c 'yarn && yarn start'
         container_name: frontend

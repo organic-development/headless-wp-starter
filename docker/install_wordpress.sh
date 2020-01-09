@@ -69,4 +69,7 @@ wp media import /var/www/images/cropped-hal-gatewood-tZc3vjPCk-Q-unsplash.jpg --
 wp media import /var/www/images/careers-photo-opt.jpg --featured_image \
   --post_id=$(wp post list --field=ID --post_type=page --name=postlight-careers)
 
+# Copy override files
+cp -r /var/www/overrides/* /var/www/html/
+
 echo "Great. You can now log into WordPress at: $WORDPRESS_URL/wp-admin ($WORDPRESS_ADMIN_USER/$WORDPRESS_ADMIN_PASSWORD)"

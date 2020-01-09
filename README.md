@@ -46,9 +46,14 @@ yarn start:gatsby
 
 The frontend will be running on http://localhost:8000
 
+## Overrides
+
+The `docker/overrides` folder can be used to update any files in the Wordpress installation.
+
 ## Known Issues / Outstanding Tasks
 
 - `isFrontPage` attribute not found in `./src/templates/page/data.js` (Requires wp-graphql >= v0.4.1, which creates [this issue](https://github.com/postlight/headless-wp-starter/issues/243))
+- Set page as frontpage, rather than posts
 - Remove test posts
 - Remove unused plugins
 - Frontend deployment to App Engine
