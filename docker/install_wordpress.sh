@@ -51,7 +51,9 @@ wp plugin install --activate --force \
     oasis-workflow \
     https://github.com/wp-graphql/wp-graphql/archive/v0.3.6.zip \
     https://github.com/wp-graphql/wp-graphql-jwt-authentication/archive/V0.3.2.zip \
-    /var/www/plugins/*.zip
+    /var/www/plugins/organic-wordpress-framework.zip \
+    /var/www/plugins/custom-blocks.zip \
+    /var/www/plugins/ultimate-marketo-forms.zip
 
 # Update WP to show page as home page
 wp option update show_on_front page

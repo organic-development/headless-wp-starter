@@ -38,6 +38,13 @@ The Wordpress install will be running on http://localhost:8080.
 docker-compose up --build --force-recreate wp-headless
 ```
 
+*Note: If you are making / pulling a change to the Wordpress install, you will need to destroy the containers and create again:*
+
+```bash
+docker-compose down
+docker system prune
+```
+
 Start the Gatsby server:
 
 ```bash
@@ -56,5 +63,5 @@ The `docker/overrides` folder can be used to update any files in the Wordpress i
 - [x] Set page as frontpage, rather than posts
 - [x] Remove test posts
 - [x] Remove unused plugins
-- [ ] Frontend deployment to App Engine
-- [ ] Backend deployment to Compute Engine
+- [ ] Frontend deployment to Firebase
+- [ ] Backend deployment to GKE
