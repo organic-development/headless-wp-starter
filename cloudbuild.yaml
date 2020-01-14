@@ -1,13 +1,16 @@
-steps: 
+steps:
   - name: node:10.18.1 
-    entrypoint: yarn 
-    args: ["install"] 
-  - name: node:10.18.1 
-    entrypoint: yarn 
+    entrypoint: yarn
+    args: ["install"]
+    dir: "frontend-gatsby"
+  - name: node:10.18.1
+    entrypoint: yarn
     args: ["add", "firebase-tools"]
-  - name: node:10.18.1 
-    entrypoint: yarn 
-    args: ["build"] 
-  - name: "node:10.18.1" 
-    entrypoint: "./node_modules/.bin/firebase" 
+  - name: node:10.18.1
+    entrypoint: yarn
+    args: ["build"]
+    dir: "frontend-gatsby"
+  - name: "node:10.18.1"
+    entrypoint: "./node_modules/.bin/firebase"
     args: ["deploy", "--project", "$PROJECT_ID", "--token", "$_TOKEN"]
+    dir: "frontend-gatsby"
