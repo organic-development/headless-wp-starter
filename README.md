@@ -57,6 +57,44 @@ The frontend will be running on http://localhost:8000
 
 The `docker/overrides` folder can be used to update any files in the Wordpress installation.
 
+## Deployment
+
+### Kubernetes
+
+Deploying the Wordpress backend to Kubernetes will allow scalability and high-availability. Use the following steps to do this:
+
+First, create an image and push it to the container registry:
+
+1. Configure `gcloud` to authenticate with Docker
+
+```bash
+gcloud auth configure-docker
+```
+
+2. Create an image from the running container
+
+```bash
+docker commit wp-headless
+```
+
+3. List the images and copy the ID of the image you just created
+
+```bash
+docker images
+```
+
+4. Tag the image with the path to your Google Container Registry
+
+```bash
+docker tag [IMAGE_ID] eu.gcr.io/[PROJECT_ID]/wp-headless
+```
+
+5. Push the image to the registry
+
+```bash
+docker push eu.gcr.io/[PROJECT_ID]/wp-headless
+```
+
 ## Known Issues / Outstanding Tasks
 
 - [x] `isFrontPage` attribute not found in `./src/templates/page/data.js` (Requires wp-graphql >= v0.4.1, which creates [this issue](https://github.com/postlight/headless-wp-starter/issues/243))
