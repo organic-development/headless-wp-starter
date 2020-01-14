@@ -6,6 +6,7 @@ steps:
   - name: node:10.18.1
     entrypoint: yarn
     args: ["add", "firebase-tools"]
+    dir: "frontend-gatsby"
   - name: node:10.18.1
     entrypoint: yarn
     args: ["build"]
