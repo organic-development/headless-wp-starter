@@ -1,8 +1,23 @@
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-const Header = ({ query }) => (
-  <header
+import Img from "gatsby-image"
+
+const Header = ({ query }) => {
+
+  const image = useStaticQuery(graphql`
+      query {
+          file: file(relativePath: { eq: "kainos-logo.png" }) {
+              childImageSharp {
+                fixed(width: 150, height: 32) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+          }
+      }
+  `)
+
+  return (<header
     style={{
       background: `#f4f4f4`,
       marginBottom: `1.45rem`,
@@ -22,16 +37,11 @@ const Header = ({ query }) => (
           textDecoration: `none`,
         }}
       >
-        <img
-          src="https://www.kainos.com/assets/header/Kainos-Logo-841a14fb110ca1f8e9ccee8f06c6cb34baa568b8a004b21d400ed2c4e5fbbb1b.png"
-          width={150}
-          alt="Kainos Logo"
-          style={{marginBottom: 0}}
-        />
+        <Img fixed={image.file.childImageSharp.fixed} />
       </Link>
     </div>
-  </header>
-)
+  </header>);
+};
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
