@@ -1,11 +1,10 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-
-const Header = ({ siteTitle }) => (
+const Header = ({ query }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `#f4f4f4`,
       marginBottom: `1.45rem`,
     }}
   >
@@ -13,20 +12,23 @@ const Header = ({ siteTitle }) => (
       style={{
         margin: `0 auto`,
         maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        padding: `2rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+      <Link
+        to="/"
+        style={{
+          color: `white`,
+          textDecoration: `none`,
+        }}
+      >
+        <img
+          src="https://www.kainos.com/assets/header/Kainos-Logo-841a14fb110ca1f8e9ccee8f06c6cb34baa568b8a004b21d400ed2c4e5fbbb1b.png"
+          width={150}
+          alt="Kainos Logo"
+          style={{marginBottom: 0}}
+        />
+      </Link>
     </div>
   </header>
 )
