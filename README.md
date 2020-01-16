@@ -104,3 +104,4 @@ docker push eu.gcr.io/[PROJECT_ID]/wp-headless
 - [x] Frontend deployment to Firebase
 - [x] Backend deployment to GKE
 - [ ] Container image missing themes / plugins (its Vanilla WP)
+- [ ] Add specific GKE configurations
