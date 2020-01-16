@@ -71,10 +71,10 @@ First, create an image and push it to the container registry:
 gcloud auth configure-docker
 ```
 
-2. Create an image from the running container
+2. Create an image from the container
 
 ```bash
-docker commit wp-headless
+docker commit headless-wp-starter_wp-headless
 ```
 
 3. List the images and copy the ID of the image you just created
@@ -101,5 +101,6 @@ docker push eu.gcr.io/[PROJECT_ID]/wp-headless
 - [x] Set page as frontpage, rather than posts
 - [x] Remove test posts
 - [x] Remove unused plugins
-- [ ] Frontend deployment to Firebase
-- [ ] Backend deployment to GKE
+- [x] Frontend deployment to Firebase
+- [x] Backend deployment to GKE
+- [ ] Container image missing themes / plugins (its Vanilla WP)
